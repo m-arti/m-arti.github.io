@@ -1,29 +1,44 @@
 ---
 layout: default
-title: Home
+title: Martins Samuel
+description: Explorations
 ---
 
 <!DOCTYPE html>
-<html>
-<body>
-<h1>Hello World</h1>
-<p>I'm hosted with GitHub Pages. Or, am I?</p>
+<html lang="en">
+
+<body id="top">
+  <header>
+    <h1><span class="author">Explorations</span></h1>
+  </header>
+  <div class="abstract">
+    <h5>Researcher & Explorer</h5>
+    <p>Hello there! Welcome to my digital palette, where I share my explorations and little discoveries.
+      I'm Martins. I'm a PhD student in COMPUTER Science at Queen's University Belfast researching <em>fake news</em> detection using unsupervised machine learning.
+    </p>
+    <p>
+      I previously was a data scientist at <a href="https://adoreboard.com/">Adoreboard</a>. And before that, I graduated with an MEng in Aerospace Engineering from Queen's.
+    </p>
+  </div>
+
+  <hr size="1" color="lightgray">
+
+  <h2>Notes</h2>
 </body>
-</html>
 
 <ul>
   {% for post in site.posts %}
-    <li>
-      <a href="{{ post.url }}">{{ post.title }}</a>
-    </li>
+  <li>
+    <a href="{{ post.url }}">{{ post.title }}</a>
+  </li>
   {% endfor %}
 </ul>
 
 {% for tag in site.tags %}
-  <h3>{{ tag[0] }}</h3>
-  <ul>
-    {% for post in tag[1] %}
-      <li><a href="{{ post.url }}">{{ post.title }}</a></li>
-    {% endfor %}
-  </ul>
+<h3>{{ tag[0] }}</h3>
+<ul>
+  {% for post in tag[1] %}
+  <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+  {% endfor %}
+</ul>
 {% endfor %}
